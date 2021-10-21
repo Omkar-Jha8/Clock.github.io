@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazing Clock</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 100vw;
+            min-height: 100vh;
+            flex-direction: column;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        div {
+            background-color: rgb(63, 23, 23);
+            color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            padding: 20px 20px;
+            border-radius: 1%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>INDIAN LOCAL TIME</h1>
+    <div>
+        <h1 class="hour"></h1>
+    </div>
+    <script>
+        var hour = document.querySelector('.hour');
+        setInterval(() => {
+            var d = new Date();
+            var Clock = d.toLocaleTimeString();
+            hour.innerHTML = Clock
+        }, 1000);
+    </script>
+</body>
+
+</html>
